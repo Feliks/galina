@@ -9,6 +9,6 @@ class Masters(models.Model):
 class Startstop(models.Model):
 	datetimestart = models.TimeField()
 	datetimestop = models.TimeField()
-	datetimeadd = models.TimeField(auto_now_add)
+	datetimeadd = models.TimeField(auto_now_add=True)
 	events = models.ForeignKey(Events)
 	masters = models.ForeignKey(Masters)
