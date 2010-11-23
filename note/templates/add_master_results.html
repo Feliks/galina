@@ -1,0 +1,12 @@
+<p>Добавлен мастер: <strong>{{ query }}</strong></p>
+
+{% if master %}
+    <p>Found {{ master|length }} m{{ master|pluralize }}.</p>
+    <ul>
+        {% for m in master %}
+        <li>{{ m.master }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Не найдено мастеров.</p>
+{% endif %}
